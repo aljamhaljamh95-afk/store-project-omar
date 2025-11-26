@@ -4,27 +4,92 @@
     <meta charset="UTF-8">
     <title>تسجيل الدخول - نظام إدارة المخازن</title>
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* تنسيق خاص لصفحة تسجيل الدخول */
+        .login-wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 380px;
+            background: rgb(15, 23, 42);
+            color: white;
+            padding: 28px 24px;
+            border-radius: 18px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .login-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: rgb(30, 41, 59);
+            margin: 10px 0;
+            color: white;
+            font-size: 15px;
+        }
+
+        .login-card input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+        }
+
+        .login-card button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 50px;
+            background: rgb(99,102,241);
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-card button:hover {
+            background: rgb(79,70,229);
+        }
+
+        #loginError {
+            color: rgb(239,68,68);
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <header>
-        <h1>تسجيل الدخول</h1>
-    </header>
+    <div class="login-wrapper">
+        <div class="login-card">
 
-    <div class="container">
-        <div class="card">
-            <h2>أدخل بيانات الدخول</h2>
+            <h2>تسجيل الدخول</h2>
 
-            <label>اسم المستخدم:</label>
-            <input type="text" id="username">
+            <label>اسم المستخدم</label>
+            <input type="text" id="username" placeholder="أدخل اسم المستخدم">
 
-            <label>كلمة المرور:</label>
-            <input type="password" id="password">
+            <label>كلمة المرور</label>
+            <input type="password" id="password" placeholder="أدخل كلمة المرور">
 
             <button id="loginBtn">دخول</button>
 
-            <p id="loginError" style="color:red; margin-top:10px;"></p>
+            <p id="loginError"></p>
+
         </div>
     </div>
 
