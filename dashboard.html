@@ -5,6 +5,53 @@
     <meta charset="UTF-8">
     <title>لوحة التحكم</title>
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* تعديل الهيدر للموبايل */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .top-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .top-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* تعديل الإحصائيات للموبايل */
+        @media (max-width: 750px) {
+            .stats-box {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .stats-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* تعديل قائمة الروابط */
+        @media (max-width: 800px) {
+            .menu-box {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .menu-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body onload="initDashboard()">
@@ -13,8 +60,7 @@
         <h1>لوحة التحكم - نظام إدارة المخازن</h1>
 
         <div class="top-buttons">
-            <a href="https://aljamhaljamh95-afk.github.io/OMARssf/" class="menu-btn">مشروع JavaScript</a>
-            <a href="omar.html" class="js-btn">تعريف بالمهندس </a>
+            <a href="omar.html" class="js-btn">تعريف بالمهندس</a>
             <a href="index.html" class="logout-btn" onclick="localStorage.removeItem('loggedIn')">تسجيل الخروج</a>
         </div>
     </header>
@@ -38,8 +84,6 @@
                 <p id="itemsCount">0</p>
             </div>
 
-            <!-- تمت إزالة إجمالي المخزون نهائياً -->
-
         </div>
 
         <div class="menu-box">
@@ -61,7 +105,4 @@
     <script src="assets/js/dashboard.js"></script>
 </body>
 
-
 </html>
-
-
