@@ -1,0 +1,283 @@
+/* ========== الخلفية العامة للجسم ========== */
+/* تحدد خط الصفحة والخلفية الأساسية */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    background: rgb(15, 23, 42); /* خلفية داكنة */
+    color: rgb(15, 23, 42);      /* لون النص */
+}
+
+/* ========== شريط العنوان العلوي (الهيدر) ========== */
+/* المنطقة التي تحتوي على عنوان النظام وزر الخروج */
+header {
+    background: rgb(17, 24, 39);      /* تدرج خفيف للون الغامق */
+    color: white;                     /* لون النص */
+    padding: 18px 30px;               /* مسافات داخلية */
+    display: flex;                    /* ترتيب أفقي */
+    justify-content: space-between;   /* مسافة بين العنوان وزر الخروج */
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35); /* ظل جميل */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+.top-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* زر مشروع JS */
+.js-btn {
+    background: rgb(20, 184, 166);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.js-btn:hover {
+    background: rgb(15, 118, 110);
+}
+.js-btn {
+    background: rgb(20, 184, 166);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.js-btn:hover {
+    background: rgb(15, 118, 110);
+}
+
+
+/* زر تسجيل الخروج */
+.logout-btn {
+    background: rgb(239, 68, 68);   /* أحمر */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 50px;            /* شكل دائري */
+    text-decoration: none;
+    font-weight: bold;
+}
+.logout-btn:hover {
+    background: rgb(185, 28, 28);   /* أحمر داكن */
+}
+
+/* ========== الحاوية الأساسية للصفحة ========== */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+/* ========== الكروت العامة ========== */
+/* تستخدم لأي صندوق (قسم) داخل الصفحة */
+.card {
+    background: rgb(255, 255, 255);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+.card h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+}
+
+/* ========== الحقول (مدخلات) ========== */
+/* تنسيق الحقول التي يكتب فيها المستخدم */
+label {
+    display: block;
+    margin: 8px 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    border-radius: 8px;
+    border: 1px solid rgb(209, 213, 219);
+    background: rgb(249, 250, 251);
+    font-size: 14px;
+}
+input:focus, select:focus {
+    border-color: rgb(99, 102, 241); /* بنفسجي */
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+    outline: none;
+}
+
+/* ========== الأزرار ========== */
+button, .btn {
+    background: rgb(99, 102, 241); /* بنفسجي */
+    color: white;
+    padding: 11px 20px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover, .btn:hover {
+    background: rgb(79, 70, 229); /* بنفسجي غامق */
+}
+
+/* زر ثانوي */
+.btn-secondary {
+    background: rgb(20, 184, 166); /* تركوازي */
+}
+.btn-secondary:hover {
+    background: rgb(15, 118, 110);
+}
+
+/* زر حذف */
+.btn-danger {
+    background: rgb(239, 68, 68); /* أحمر */
+}
+.btn-danger:hover {
+    background: rgb(185, 28, 28);
+}
+
+/* ========== الجداول ========== */
+/* جدول عرض الفواتير والأصناف */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+th {
+    background: rgb(99, 102, 241); /* بنفسجي */
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+td {
+    padding: 9px;
+    font-size: 13px;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+tr:nth-child(even) td {
+    background: rgb(249, 250, 251);
+}
+tr:hover td {
+    background: rgb(229, 243, 255);
+}
+
+/* ========== كروت الإحصائيات (الداشبورد) ========== */
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: rgb(238, 242, 255);
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 15px;
+    color: rgb(107, 114, 128);
+}
+
+.stat-card p {
+    margin: 8px 0 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(79, 70, 229);
+}
+
+/* ========== قائمة الروابط ========== */
+.menu-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.menu-btn {
+    background: rgb(99, 102, 241);
+    padding: 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+.menu-btn:hover {
+    background: rgb(79, 70, 229);
+}
+
+/* ========== صفحة تسجيل الدخول ========== */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(11, 17, 32);
+}
+
+.login-card {
+    background: rgb(15, 23, 42);
+    color: white;
+    padding: 24px;
+    border-radius: 18px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+}
+
+.login-error {
+    color: rgb(239, 68, 68);
+    margin-top: 8px;
+}
+
+/* ========== الطباعة ========== */
+@media print {
+    header,
+    .menu-box,
+    .stats-box,
+    button,
+    .logout-btn {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    table, .card {
+        border: 1px solid black !important;
+        box-shadow: none !important;
+    }
+
+    th {
+        background: black !important;
+        color: white !important;
+    }
+}

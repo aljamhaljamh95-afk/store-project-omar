@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>فاتورة خروج</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="initExit()">
+
+<header>
+    <h1>فاتورة خروج</h1>
+    <a href="dashboard.html" class="logout-btn">عودة</a>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>بيانات الفاتورة</h2>
+
+        <label>رقم الفاتورة</label>
+        <input type="text" id="invoiceId">
+
+        <label>التاريخ</label>
+        <input type="date" id="invoiceDate">
+
+        <label>اسم العميل</label>
+        <input type="text" id="customer">
+    </div>
+
+    <div class="card">
+        <h2>إضافة صنف للفاتورة</h2>
+
+        <label>الصنف</label>
+        <select id="itemSelect"></select>
+
+        <label>الكمية</label>
+        <input type="number" id="qty">
+
+        <label>السعر</label>
+        <input type="number" id="price">
+
+        <button onclick="addItemToExit()">إضافة</button>
+    </div>
+
+    <div class="card" id="invoiceArea">
+        <h2>الأصناف داخل الفاتورة</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>الصنف</th>
+                    <th>الكمية</th>
+                    <th>السعر</th>
+                    <th>حذف</th>
+                </tr>
+            </thead>
+            <tbody id="itemsTable"></tbody>
+        </table>
+    </div>
+
+    <button class="btn-secondary" onclick="saveExitInvoice()">حفظ الفاتورة</button>
+    <button class="btn" onclick="printDiv('invoiceArea')">طباعة الفاتورة</button>
+
+</div>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/exit.js"></script>
+
+</body>
+</html>

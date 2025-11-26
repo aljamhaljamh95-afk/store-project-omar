@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="initDashboard()">
+
+    <header>
+        <h1>لوحة التحكم - نظام إدارة المخازن</h1>
+
+        <div class="top-buttons">
+            <a href="js-project.html" class="menu-btn">مشروع JavaScript</a>
+            <a href="omar.html" class="js-btn">تعريف بالمهندس </a>
+            <a href="index.html" class="logout-btn" onclick="localStorage.removeItem('loggedIn')">تسجيل الخروج</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="stats-box">
+
+            <div class="stat-card">
+                <h3>إجمالي فواتير الدخول</h3>
+                <p id="entryCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>إجمالي فواتير الخروج</h3>
+                <p id="exitCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>عدد الأصناف</h3>
+                <p id="itemsCount">0</p>
+            </div>
+
+            <!-- تمت إزالة إجمالي المخزون نهائياً -->
+
+        </div>
+
+        <div class="menu-box">
+            <a href="items.html" class="menu-btn">إدارة الأصناف</a>
+            <a href="entry.html" class="menu-btn">فاتورة دخول</a>
+            <a href="exit.html" class="menu-btn">فاتورة خروج</a>
+            <a href="inventory.html" class="menu-btn">الجرد</a>
+            <a href="reports.html" class="menu-btn">التقارير</a>
+        </div>
+
+        <div class="card">
+            <h2>آخر الفواتير</h2>
+            <div id="lastInvoices"></div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

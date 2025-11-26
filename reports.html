@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>التقارير</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="initReports()">
+
+<header>
+    <h1>التقارير</h1>
+    <a href="dashboard.html" class="logout-btn">عودة</a>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>بحث حسب رقم الفاتورة</h2>
+
+        <label>رقم الفاتورة</label>
+        <input type="text" id="searchInvoiceId">
+
+        <button onclick="searchByInvoice()">بحث</button>
+    </div>
+
+    <div class="card">
+        <h2>بحث حسب التاريخ</h2>
+
+        <label>التاريخ</label>
+        <input type="date" id="searchDate">
+
+        <button onclick="searchByDate()">بحث</button>
+    </div>
+
+    <div class="card" id="reportArea">
+        <h2>نتائج البحث</h2>
+        <div id="results"></div>
+    </div>
+
+    <button class="btn" onclick="printDiv('reportArea')">طباعة التقرير</button>
+
+</div>
+
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/reports.js"></script>
+
+</body>
+</html>
